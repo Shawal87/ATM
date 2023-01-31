@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+OptionMenu <|-- Account
+OptionMenu --> ATM
+
+class ATM{
++ static void  main()
+OptionMenu = new
+optionMenu.getLogin()
+
+}
+
+class  OptionMenu{
+HasMap<Integer,Integer> data
++ void getLogin() throws IOE
++ void getAccountType()
++ void getChecking()
++ void getSaving()
+
+
+}
+
+class Account {
+ - int customerNumber
+ - int pinNumber
+ - double checkingBalance = 0
+ - double savingBalance = 0
+
++ int setCustomerNumber(int customerNumber)
++ int getCustomerNumber()
+
++ int setPinNumber(int pinNumber)
++ int getPinNumber()
+
++ double getCheckingBalance()
++ double getSavingBalance()
++ double calcCheckingWithdraw(double amount)
++ double calcSavingWithdraw(double amount)
++ double calcCheckDeposit(double amount)
++ double calcSavingDeposit(double amount)
++ void getCheckingWithdrawInput()
++ void getCheckingDepositInput()
+
+
+
+
+}
+
+
+@enduml
